@@ -1,0 +1,124 @@
+.hero {
+  width: 100%;
+  padding: 160px 0 120px;
+//   background: $bgdark;
+  justify-content: center;
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    &__title {
+      font-family: Inter;
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 700;
+      background: $darkGrad;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      animation: titleGrad 2s infinite alternate;
+    }
+
+    &__subtitle {
+      font-weight: 400;
+      font-size: 20px;
+      color: $darktext;
+      margin-top: 24px;
+    }
+
+    &__button {
+      margin-top: 24px;
+    }
+  }
+}
+
+.flying-card {
+  position: absolute;
+  &:nth-of-type(1) {
+    right: 12%;
+    top: 34%;
+
+    animation: flying-card 4s alternate infinite ease-in-out 1.5s;
+  }
+  &:nth-of-type(2) {
+    right: 16%;
+    top: 48%;
+
+    animation: flying-card 4s alternate infinite ease-in-out 3s;
+  }
+  &:nth-of-type(3) {
+    left: 2%;
+    top: 2%;
+
+    animation: flying-card 4s alternate infinite ease-in-out 1.5s;
+  }
+  &:nth-of-type(4) {
+    left: 8%;
+    top: 29%;
+
+    animation: flying-card 4s alternate infinite ease-in-out 3s;
+  }
+  transform: rotate(-4deg);
+  display: flex;
+  width: 180px;
+  height: 150px;
+  padding: 28px 19px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 12px;
+  background: $carddark;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+
+  &__title {
+    color: $mainlightpurple;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  &__text {
+    color: $darktext;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  transition: transform 0.5s ease, z-index 0.5s;
+  &:hover {
+    animation: none;
+    transform: rotate(0deg) translateY(0) scale(1.2) translateX(-25%);
+    z-index: 10;
+  }
+}
+
+@keyframes titleGrad {
+  0% {
+    background-position-x: 0%;
+  }
+
+  100% {
+    background-position-x: 70%;
+  }
+}
+
+@keyframes flying-card {
+  0% {
+    transform: translateY(0px) rotate(-4deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-4deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(-4deg);
+  }
+}

@@ -1,2 +1,7 @@
 @import "../../scss/vars";
 @import '../../scss/header';
+@import 'hero';
+
+body {
+    background: $bgdark;
+}
