@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url(../../assets/font/Inter-VariableFont_opsz\,wght.ttf);
+  src: url(../../assets/font/Inter-VariableFont_opszwght.ttf);
 }
 * {
   margin: 0;
@@ -146,4 +146,31 @@ body {
   75% {
     transform: translate(-50px, 30px) scale(0.9);
   }
+}
+.badge-container {
+  display: flex;
+  justify-content: start;
+}
+.badge-container .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(99, 102, 241, 0.15);
+  border-radius: 25px;
+  padding: 10px 24px;
+  transition: background 0.3s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.badge-container .badge__text {
+  color: #6366F1;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.5s;
+}
+.badge-container .badge:hover {
+  background: #4338ca;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15), 0px 0px 12px 4px rgba(79, 70, 229, 0.3);
+  transform: translateY(-2px) scale(1.02);
+}
+.badge-container .badge:hover .badge__text {
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

@@ -1,10 +1,10 @@
 .hero {
   width: 100%;
   padding: 160px 0 120px;
-//   background: $bgdark;
+  //   background: $bgdark;
   justify-content: center;
   &__content {
-    max-width: 800px;
+    max-width: 725px;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -42,27 +42,23 @@
 .flying-card {
   position: absolute;
   &:nth-of-type(1) {
-    right: 12%;
+    right: 6%;
     top: 34%;
-
     animation: flying-card 4s alternate infinite ease-in-out 1.5s;
   }
   &:nth-of-type(2) {
-    right: 16%;
+    right: 10%;
     top: 48%;
-
     animation: flying-card 4s alternate infinite ease-in-out 3s;
   }
   &:nth-of-type(3) {
-    left: 2%;
+    left: 0;
     top: 2%;
-
     animation: flying-card 4s alternate infinite ease-in-out 1.5s;
   }
   &:nth-of-type(4) {
-    left: 8%;
+    left: 2%;
     top: 29%;
-
     animation: flying-card 4s alternate infinite ease-in-out 3s;
   }
   transform: rotate(-4deg);
@@ -91,12 +87,12 @@
     font-size: 14px;
     font-weight: 400;
   }
-  transition: transform 0.5s ease, z-index 0.5s;
-  &:hover {
-    animation: none;
-    transform: rotate(0deg) translateY(0) scale(1.2) translateX(-25%);
-    z-index: 10;
-  }
+  // transition: all 0.5s 1s;
+  //   &:hover {
+  //     animation: none;
+  //     transform: rotate(0deg) translateY(0) scale(1.2) translateX(-25%);
+  //     z-index: 10;
+  //   }
 }
 
 @keyframes titleGrad {
