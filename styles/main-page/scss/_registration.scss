@@ -1,0 +1,107 @@
+.registration {
+  padding: 50px 0px 120px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    span {
+      color: #6366f1;
+      font-size: 40px;
+    }
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    color: $darktext;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 85px;
+  }
+
+  &__call {
+    background: $carddark;
+    border-radius: 12px;
+    padding: 40px 50px;
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.25);
+    max-width: 75%;
+    display: flex;
+    gap: 70px;
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 1px 2px 25px 3px rgba(79, 70, 229, 0.3);
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 12px;
+      &__title {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      &__text {
+        color: $darktext;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      &__phone {
+        color: $darktext;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        span {
+          margin-left: 12px;
+          color: #6366f1;
+          font-size: 16px;
+          font-weight: 900;
+        }
+      }
+    }
+
+    &__form {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+
+      &__input {
+        width: 100%;
+        background: $carddark;
+        outline: none;
+        border-radius: 12px;
+        border: 1px solid rgba(248, 250, 252, 0.1);
+        padding: 11px 18px;
+        color: $darktext;
+        transition-property: color box-shadow border padding;
+        transition-duration: 0.1s;
+        &:focus {
+          border: 3px #f8fafcd5 solid;
+          box-shadow: 1px 2px 12px 3px rgba(79, 70, 229, 0.3);
+          color: #ffffff;
+          padding: 13px 20px;
+        }
+      }
+
+      &__button {
+        width: 100%;
+      }
+    }
+  }
+}
