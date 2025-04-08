@@ -1,0 +1,32 @@
+.badge-container {
+    display: flex;
+    justify-content: start;
+    .badge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $badge;
+      border-radius: 25px;
+      padding: 10px 24px;
+      &__text {
+        color: $mainlightpurple;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.5s;
+      }
+      transition: background 0.3s ease,
+        transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+      &:hover {
+        .badge__text {
+          color: #ffffff;
+        }
+        background: #4338ca;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15),
+          0px 0px 12px 4px rgba(79, 70, 229, 0.3);
+        transform: translateY(-2px) scale(1.02);
+  
+        
+  
+      }
+    }
+  }

@@ -15,6 +15,36 @@
       <div class="gradient-sphere sphere-4"></div>
       <div class="gradient-sphere sphere-5"></div>
     </div>
+    <div class="modal open">
+      <div class="modal__overlay" data-close="true">
+        <div class="modal__window">
+          <header class="modal__window__header">
+            <span class="modal__window__header__close">&times;</span>
+            <h3 class="modal__window__header__title">Закажи звонок</h3>
+            <h4 class="modal__window__header__subtitle">Мы перезвоним вам в ближайшее время</h4>
+          </header>
+          <div class="modal__window__body">
+            <form class="modal__window__body__form" action="" method="post">
+              <input
+                data-type="name"
+                type="text"
+                class="modal__window__body__form__input"
+                placeholder="Имя"
+              />
+              <input
+                data-type="phone"
+                type="tel"
+                class="modal__window__body__form__input"
+                placeholder="Номер телефона"
+              />
+              <button class="modal__window__body__form__button button">
+                Заказать звонок
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <header class="header">
       <div class="header__logo">
@@ -773,8 +803,9 @@
       <section class="registration">
         <div class="container">
           <h2 class="registration__title">
-            <span>Подходящая автошкола</span><br> важнейший элемент на пути к тому,
-            чтобы освоить автомобиль и получить большую свободу передвижения
+            <span>Подходящая автошкола</span><br />
+            важнейший элемент на пути к тому, чтобы освоить автомобиль и
+            получить большую свободу передвижения
           </h2>
           <h3 class="registration__subtitle">
             Можете считать, что Вы нашли всё это! Автошкола Минска Автовождение
@@ -814,7 +845,10 @@
                 class="registration__call__form__input"
                 placeholder="Номер телефона"
               />
-              <button type="submit" class="registration__call__form__button button">
+              <button
+                type="submit"
+                class="registration__call__form__button button"
+              >
                 Заказать звонок
               </button>
             </div>

@@ -1,0 +1,76 @@
+/* Animated Background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.gradient-sphere {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $mainlightpurple, $maindarkpurple);
+  opacity: 0.1;
+  transition: transform 0.3s ease;
+  animation: floatSphere 20s infinite ease-in-out;
+  z-index: 10;
+}
+
+.sphere-1 {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.sphere-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  left: -50px;
+  animation-delay: -5s;
+}
+
+.sphere-3 {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  right: 10%;
+  animation-delay: -10s;
+}
+
+.sphere-4 {
+  width: 250px;
+  height: 250px;
+  top: 20%;
+  left: 15%;
+  animation-delay: -7s;
+}
+
+.sphere-5 {
+  width: 180px;
+  height: 180px;
+  bottom: 20%;
+  right: 20%;
+  animation-delay: -12s;
+}
+@keyframes floatSphere {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(50px, 30px) scale(1.1);
+  }
+  50% {
+    transform: translate(0, 60px) scale(1);
+  }
+  75% {
+    transform: translate(-50px, 30px) scale(0.9);
+  }
+}

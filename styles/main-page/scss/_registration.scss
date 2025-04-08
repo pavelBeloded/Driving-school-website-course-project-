@@ -35,9 +35,11 @@
     max-width: 75%;
     display: flex;
     gap: 70px;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s;
     &:hover {
       box-shadow: 1px 2px 25px 3px rgba(79, 70, 229, 0.3);
+      transform: scale(1.1);
+      background: rgba(30, 41, 59, 1);
     }
 
     &__content {
