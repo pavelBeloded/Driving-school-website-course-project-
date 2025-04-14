@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Inter";
-  src: url(../../assets/font/Inter-VariableFont_opszwght.ttf);
+  src: url("../../assets/font/Inter.ttf");
 }
 * {
   margin: 0;
