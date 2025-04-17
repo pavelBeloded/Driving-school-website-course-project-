@@ -10,9 +10,14 @@
     <script defer src="../js/modal.js"></script>
     <script defer src="../js/main_modal.js"></script>
     <script defer src="../js/burger_menu.js"></script>
+    <script defer src="../js/hide_header.js"></script>
+    <script defer src="../js/progressbar.js"></script>
   </head>
   <body>
-    <div class="animated-bg">
+    <div class="progress-bar">
+      <div class="progress-bar__line"></div>
+    </div>
+    <div class="animated-bg light">
       <div class="gradient-sphere sphere-1"></div>
       <div class="gradient-sphere sphere-2"></div>
       <div class="gradient-sphere sphere-3"></div>
@@ -804,34 +809,37 @@
       <section class="registration">
         <div class="container">
           <h2 class="registration__title">
-            <span>Подходящая автошкола</span><br />
-            важнейший элемент на пути к тому, чтобы освоить автомобиль и
-            получить большую свободу передвижения
+            Подходящая автошкола
           </h2>
-          <h3 class="registration__subtitle">
-            Можете считать, что Вы нашли всё это! Автошкола Минска Автовождение
-            предлагает вождения для получения водительских прав категории "B".
-          </h3>
+          <h3 class="registration__subtitle">важнейший элемент на пути к тому, чтобы освоить автомобиль и
+            получить большую свободу передвижения</h3>
           <div class="registration__call">
             <div class="registration__call__content">
-              <div class="badge-container">
-                <div class="badge">
-                  <span class="badge__text">Записаться</span>
+              <div class="registration__call__content__text-container">
+                <div class="badge-container">
+                  <div class="badge">
+                    <span class="badge__text">Записаться</span>
+                  </div>
                 </div>
+                <h4 class="registration__call__content__title">
+                  Начните Обучение Сегодня
+                </h4>
+                <p class="registration__call__content__text">
+                  Сделайте первый шаг к тому, чтобы стать уверенным и
+                  квалифицированным водителем. Наша команда здесь, чтобы помочь!
+                </p>
               </div>
-              <h4 class="registration__call__content__title">
-                Начните Обучение Сегодня
-              </h4>
-              <p class="registration__call__content__text">
-                Сделайте первый шаг к тому, чтобы стать уверенным и
-                квалифицированным водителем. Наша команда здесь, чтобы помочь!
-              </p>
-              <p class="registration__call__content__phone">
-                8 (029) 678-72-77 <span>A1</span>
-              </p>
-              <p class="registration__call__content__phone">
-                8 (029) 754-72-77 <span>МТС</span>
-              </p>
+              <div class="registration__call__content__phone-container">
+                <p class="registration__call__content__phone">
+                  8 (029) 678-72-77 <span>A1</span>
+                </p>
+                <p class="registration__call__content__phone">
+                  8 (029) 754-72-77 <span>МТС</span>
+                </p>
+              </div>
+              
+
+              
             </div>
             <div class="registration__call__form">
               <input
@@ -849,7 +857,6 @@
               <button
                 type="submit"
                 class="registration__call__form__button button"
-                data-btn="open_modal"
               >
                 Заказать звонок
               </button>

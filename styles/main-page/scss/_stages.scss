@@ -1,8 +1,11 @@
 .stages {
+  @media(max-width:784px) {
+    pointer-events: none;
+  }
   &__title {
     color: #f8fafc;
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 50px;
   }
@@ -10,12 +13,13 @@
   &__cards {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 2rem;
     &__item {
       user-select: none;
       position: relative;
-      width: 300px;
-      padding: 28px 24px;
+      width: 18.75rem;
+      padding: 1.75rem 1.5rem;
       background: $carddark;
       border-radius: 12px;
       box-shadow: 1px 2px 12px 2px rgba(0, 0, 0, 0.25);
@@ -51,32 +55,35 @@
         }
       }
       &__logo {
-        z-index: 10px;
+        z-index: 10;
         display: flex;
-        width: 62px;
-        height: 62px;
-        padding: 17px 19px;
+        width: 3.875rem;
+        height: 3.875rem;
+        padding: 1.0625rem 1.1875rem;
         align-items: center;
         border-radius: 31px;
         background: $badge;
-        margin-bottom: 28px;
+        margin-bottom: 1.75rem;
       }
 
       &__title {
-        z-index: 10px;
+        z-index: 10;
         color: #fff;
-        font-size: 28px;
+        font-size: 1.75rem;
         font-weight: 700;
-        margin-bottom: 28px;
+        margin-bottom: 1.75rem;
       }
 
       &__content {
         z-index: 10;
         &__block {
           display: flex;
-          gap: 16px;
+          gap: 1rem;
+          // @media (max-width: 850px) {
+          //   gap: 0.5rem;
+          // }
           &:not(:last-of-type) {
-            margin-bottom: 28px;
+            margin-bottom: 1.75rem;
           }
 
           transition: transform 0.5s, scale 0.5s;
@@ -88,13 +95,13 @@
           &__content {
             &__title {
               color: #ffffff;
-              font-size: 18px;
+              font-size: 1.125rem;
               font-weight: 700;
-              margin-bottom: 16px;
+              margin-bottom: 1rem;
             }
             &__text {
               color: $darktext;
-              font-size: 14px;
+              font-size: 0.875rem;
               font-weight: 500;
               max-width: 85%;
               transition: transform 0.5s, scale 0.5s, color 0.5s;

@@ -7,10 +7,10 @@
       align-items: center;
       background: $badge;
       border-radius: 25px;
-      padding: 10px 24px;
+      padding: 0.65rem 1.5rem;
       &__text {
         color: $mainlightpurple;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 500;
         transition: color 0.5s;
       }
