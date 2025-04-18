@@ -11,4 +11,7 @@
 @import '../../scss/_progress-bar';
 body {
     background: $bgdark;
+    &.light {
+    background: $bglight;
+    }
 }

@@ -1,7 +1,8 @@
+@import "../../scss/vars";
+
 .hero {
   width: 100%;
   padding: 160px 0 120px;
-  //   background: $bgdark;
   justify-content: center;
   &__content {
     max-width: 725px;
@@ -37,68 +38,82 @@
       margin-top: 24px;
     }
   }
+
+  &.light &__content {
+    &__title {
+      background: $lightGrad;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      animation: titleGrad 2s infinite alternate;
+    }
+
+    &__subtitle {
+      color: $lighttext;
+    }
+  }
+
+  .flying-card {
+    position: absolute;
+
+    @media (max-width: 550px) {
+      display: none;
+    }
+    &:nth-of-type(1) {
+      right: 6%;
+      top: 34%;
+      animation: flying-card 4s alternate infinite ease-in-out 1.5s;
+    }
+    &:nth-of-type(2) {
+      right: 10%;
+      top: 48%;
+      animation: flying-card 4s alternate infinite ease-in-out 3s;
+    }
+    &:nth-of-type(3) {
+      left: 0;
+      top: 2%;
+      animation: flying-card 4s alternate infinite ease-in-out 1.5s;
+    }
+    &:nth-of-type(4) {
+      left: 2%;
+      top: 29%;
+      animation: flying-card 4s alternate infinite ease-in-out 3s;
+    }
+    transform: rotate(-4deg);
+    display: flex;
+    width: 11.25rem;
+    height: 9.375rem;
+    padding: 28px 19px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 12px;
+    background: $carddark;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+
+    &__title {
+      color: $mainlightpurple;
+      text-align: center;
+      font-size: 1.18rem;
+      font-weight: 700;
+    }
+
+    &__text {
+      color: $darktext;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+  }
+  &.light .flying-card {
+    background: $cardlight;
+    &__text {
+      color: $lighttext;
+    }
+  }
 }
-
-.flying-card {
-  position: absolute;
-
-  @media (max-width: 550px) {
-    display: none;
-  }
-  &:nth-of-type(1) {
-    right: 6%;
-    top: 34%;
-    animation: flying-card 4s alternate infinite ease-in-out 1.5s;
-  }
-  &:nth-of-type(2) {
-    right: 10%;
-    top: 48%;
-    animation: flying-card 4s alternate infinite ease-in-out 3s;
-  }
-  &:nth-of-type(3) {
-    left: 0;
-    top: 2%;
-    animation: flying-card 4s alternate infinite ease-in-out 1.5s;
-  }
-  &:nth-of-type(4) {
-    left: 2%;
-    top: 29%;
-    animation: flying-card 4s alternate infinite ease-in-out 3s;
-  }
-  transform: rotate(-4deg);
-  display: flex;
-  width: 11.25rem;
-  height: 9.375rem;
-  padding: 28px 19px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  border-radius: 12px;
-  background: $carddark;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
-
-  &__title {
-    color: $mainlightpurple;
-    text-align: center;
-    font-size: 1.18rem;
-    font-weight: 700;
-  }
-
-  &__text {
-    color: $darktext;
-    font-size: 0.875rem;
-    font-weight: 400;
-  }
-  // transition: all 0.5s 1s;
-  //   &:hover {
-  //     animation: none;
-  //     transform: rotate(0deg) translateY(0) scale(1.2) translateX(-25%);
-  //     z-index: 10;
-  //   }
-}
-
 @keyframes titleGrad {
   0% {
     background-position-x: 0%;

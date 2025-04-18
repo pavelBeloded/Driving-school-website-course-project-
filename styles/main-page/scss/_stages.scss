@@ -1,5 +1,7 @@
+@import "../../scss/vars";
+
 .stages {
-  @media(max-width:784px) {
+  @media (max-width: 784px) {
     pointer-events: none;
   }
   &__title {
@@ -8,6 +10,10 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 50px;
+  }
+
+  &.light &__title {
+    color: $lighthead;
   }
 
   &__cards {
@@ -79,9 +85,6 @@
         &__block {
           display: flex;
           gap: 1rem;
-          // @media (max-width: 850px) {
-          //   gap: 0.5rem;
-          // }
           &:not(:last-of-type) {
             margin-bottom: 1.75rem;
           }
@@ -113,6 +116,50 @@
             }
           }
         }
+      }
+    }
+  }
+
+  &.light &__cards {
+    &__item {
+      background: $cardlight;
+      &::after {
+        background: #1e293b42;
+      }
+
+      &:hover {
+        border-color: $maindarkpurple;
+
+        &::after {
+          transform: rotate(15deg) translateY(-800px);
+          background: #1e293b6e;
+        }
+      }
+
+      &__logo {
+        path {
+          stroke: $lighthead;
+        }
+      }
+
+      &__title {
+        color: $lighthead;
+      }
+      path {
+        stroke: $lighthead;
+      }
+      &__content__block__content {
+            
+
+            &__title {
+              color: $lighthead;
+            }
+            &__text {
+              color: $lighttext;
+              &:hover {
+                color: $lighthead;
+              }
+            }
       }
     }
   }

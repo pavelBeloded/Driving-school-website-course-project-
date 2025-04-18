@@ -1,3 +1,5 @@
+@import "../scss/vars";
+
 .modal {
   &__overlay,
   &__window {
@@ -134,4 +136,43 @@
       }
     }
   }
+
+  &.light &__window {
+    background: $cardlight;
+
+    &__header {
+      &__close {
+        color: $lighttext;
+        &:hover {
+          color: $lighthead;
+        }
+      }
+
+      &__title {
+        color: $lighthead;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      &__subtitle {
+        color: $lighttext;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+
+    &__body__form {
+      &__input {
+        color: $lighttext;
+        border-color:$lighttext;
+        background: $cardlight;
+        &::placeholder {
+          color: $lighttext;
+        }
+      }
+    }
+  }
 }
+

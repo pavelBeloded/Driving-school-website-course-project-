@@ -19,4 +19,13 @@
       font-weight: 500;
     }
   }
+
+
+  &.light {
+    background: $cardlight;
+  }
+
+  &.light &__content__item {
+    color: $lighthead;
+  }
 }

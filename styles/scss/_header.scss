@@ -10,14 +10,27 @@
   padding: 18px 35px;
   transform: translateY(0);
   transition: transform 0.3s linear;
+
+  &.light {
+    background: $cardlight;
+  }
+
   &.hide {
     transform: translateY(-100px);
   }
 
   &__logo {
-    @media (max-width:1100px) {
+    @media (max-width: 1100px) {
       svg {
         width: 200px;
+      }
+    }
+  }
+
+  &.light &__logo {
+    svg {
+      & path:first-of-type {
+        fill: $lighthead;
       }
     }
   }
@@ -80,10 +93,18 @@
     }
   }
 
+  &.light &__burger {
+    &::after,
+    &::before,
+    span {
+      background: $lighttext;
+    }
+  }
+  
   &__location {
-@media (max-width:1000px) {
-  display: none;
-}
+    @media (max-width: 1000px) {
+      display: none;
+    }
 
     @media (max-width: 784px) {
       display: none;
@@ -97,6 +118,14 @@
         color: $darktext;
         margin-left: 6px;
         font-size: 1rem;
+      }
+    }
+  }
+
+  &.light &__location {
+    &__item {
+      &__text {
+        color: $lighttext;
       }
     }
   }
@@ -118,7 +147,7 @@
       @media (max-width: 784px) {
         display: flex;
       }
-      
+
       .header__nav__list {
         flex-direction: column;
       }
@@ -136,7 +165,7 @@
         &__link {
           color: $darktext;
           text-decoration: none;
-        font-size: 1rem;
+          font-size: 1rem;
         }
         span::after {
           content: "";
@@ -170,6 +199,28 @@
     }
   }
 
+  &.light &__nav__list__item {
+    &__link {
+      color: $lighttext;
+    }
+
+    span::after {
+      background: $lighttext;
+      box-shadow: 0px 0px 3px 2px rgba(151, 151, 151, 0.3);
+
+    }
+
+    &.active {
+      a {
+        color: $mainlightpurple;
+      }
+      span::after {
+        background: $maindarkpurple;
+        box-shadow: 0px 0px 3px 2px rgba(79, 70, 229, 0.3);
+      }
+    }
+  }
+
   &__action {
     @media (max-width: 784px) {
       display: none;
@@ -177,28 +228,30 @@
   }
 
   &__mobile {
-    opacity:0;
+    opacity: 0;
     height: 100vh;
     width: 100%;
     background: $bgdark;
     position: absolute;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     top: 0;
     left: 0;
     z-index: -1;
     // top: 50%;
     // left: 50%;
     transform: translateY(-200%);
-    transition: .3s;
+    transition: 0.3s;
     &.active {
       opacity: 1;
-    transform: translateY(0);
+      transform: translateY(0);
     }
   }
-  
+  &.light &__mobile {
+    background: $bglight;
 
+  }
   &.active {
     @media (max-width: 784px) {
       background: rgba(30, 27, 75, 1);

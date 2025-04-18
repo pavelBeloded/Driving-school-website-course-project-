@@ -1,3 +1,5 @@
+@import "../../scss/vars";
+
 .registration {
   padding: 3.125rem 0rem 7.5rem;
   .container {
@@ -11,10 +13,9 @@
     font-size: 2.5rem;
     text-align: center;
     font-weight: 700;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     @media (max-width: 480px) {
-    margin-bottom: 1.5rem;
-      
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -25,8 +26,12 @@
     font-weight: 500;
     margin-bottom: 3.3125rem;
     @media (max-width: 480px) {
-      display:none;
+      display: none;
     }
+  }
+
+  &.light &__subtitle {
+    color: $lighthead;
   }
 
   &__call {
@@ -87,7 +92,6 @@
       &__text-container {
         display: flex;
         flex-direction: column;
-        // align-items: start;
         justify-content: start;
         gap: 0.75rem;
 
@@ -173,6 +177,42 @@
 
       &__button {
         width: 100%;
+      }
+    }
+  }
+
+  &.light &__call {
+    background: $cardlight; 
+    &:hover {
+      background: #ffffff;
+      @media (max-width: 784px) {
+        background: $cardlight;
+      }
+    }
+
+    &__content {
+      &__title {
+        color: $lighthead;
+      }
+      &__text {
+        color: $lighttext;
+      }
+      &__phone {
+        color: $lighttext;
+      }
+    }
+
+    &__form {
+      &__input {
+        background: $cardlight;
+        color: $lighttext;
+        border: 1px solid $lighttext;
+        &:focus {
+          border: 3px $lighttext solid;
+          box-shadow: 1px 2px 12px 3px rgba(79, 70, 229, 0.3);
+          color: $lighthead;
+          padding: 0.8125rem 1.25rem;
+        }
       }
     }
   }

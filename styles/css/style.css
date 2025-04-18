@@ -22,11 +22,6 @@ html {
     font-size: 12px;
   }
 }
-@media (max-width: 480px) {
-  html {
-    font-size: 10px;
-  }
-}
 
 body {
   font-weight: 500;
