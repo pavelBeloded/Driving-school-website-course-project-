@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/css/style.css" />
-    <link rel="stylesheet" href="../styles/main-page/css/style.css" />
-    <link rel="icon" sizes="any" href="../assets/favicon.png">
-    <title>Автовождение - Главная</title>
+    <link rel="stylesheet" href="../styles/learning-page/css/style.css" />
+    <link rel="icon" sizes="any" href="../assets/favicon.png" />
     <script defer src="../js/base.js"></script>
     <script defer src="../js/modal.js"></script>
     <script defer src="../js/main_modal.js"></script>
@@ -14,9 +13,10 @@
     <script defer src="../js/hide_header.js"></script>
     <script defer src="../js/progressbar.js"></script>
     <script defer src="../js/toggleTheme.js"></script>
+    <script defer src="../js/car_light.js"></script>
+    <title>Обучение</title>
   </head>
-  <body class="">
-
+  <body>
     <div class="progress-bar">
       <div class="progress-bar__line"></div>
     </div>
@@ -123,12 +123,18 @@
         </div>
         <nav class="header__nav">
           <ul class="header__nav__list">
-            <li class="header__nav__list__item active">
-              <a href="/html/main_page.html" class="header__nav__list__item__link">Главная</a
+            <li class="header__nav__list__item">
+              <a
+                href="/html/main_page.html"
+                class="header__nav__list__item__link"
+                >Главная</a
               ><span></span>
             </li>
-            <li class="header__nav__list__item">
-              <a href="/html/learning_page.html" class="header__nav__list__item__link">Обучение</a
+            <li class="header__nav__list__item active">
+              <a
+                href="/html/learning_page.html"
+                class="header__nav__list__item__link"
+                >Обучение</a
               ><span></span>
             </li>
             <li class="header__nav__list__item">
@@ -139,26 +145,48 @@
               <a href="#" class="header__nav__list__item__link">Отзывы</a
               ><span></span>
             </li>
-            <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Сменить тему">
+            <button
+              id="themeToggleBtn"
+              onclick="toggleTheme()"
+              aria-label="Сменить тему"
+            >
               <div id="iconWrapper">
                 <!-- Солнце -->
-                <svg id="sunIcon" class="icon show" viewBox="0 0 24 24" fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="5" fill="#F8FAFCCC"/>
+                <svg
+                  id="sunIcon"
+                  class="icon show"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  width="32"
+                  height="32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="5" fill="#F8FAFCCC" />
                   <g stroke="#F8FAFCCC" stroke-width="2">
-                    <line x1="12" y1="1" x2="12" y2="4"/>
-                    <line x1="12" y1="20" x2="12" y2="23"/>
-                    <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
-                    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
-                    <line x1="1" y1="12" x2="4" y2="12"/>
-                    <line x1="20" y1="12" x2="23" y2="12"/>
-                    <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
-                    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+                    <line x1="12" y1="1" x2="12" y2="4" />
+                    <line x1="12" y1="20" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="4" y2="12" />
+                    <line x1="20" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
                   </g>
                 </svg>
-            
+
                 <!-- Луна -->
-                <svg id="moonIcon" class="icon hide" viewBox="0 0 24 24" fill="#1E293BCC" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"/>
+                <svg
+                  id="moonIcon"
+                  class="icon hide"
+                  viewBox="0 0 24 24"
+                  fill="#1E293BCC"
+                  width="32"
+                  height="32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"
+                  />
                 </svg>
               </div>
             </button>
@@ -173,12 +201,19 @@
       <div class="header__mobile">
         <nav class="header__nav mobile">
           <ul class="header__nav__list">
-            <li class="header__nav__list__item active">
-              <a href="./main_page.html" class="header__nav__list__item__link" target="_blank">Главная</a
+            <li class="header__nav__list__item">
+              <a
+                href="./main_page.html"
+                class="header__nav__list__item__link"
+                target="_blank"
+                >Главная</a
               ><span></span>
             </li>
             <li class="header__nav__list__item">
-              <a href="./learning_page.html" class="header__nav__list__item__link">Обучение</a
+              <a
+                href="./learning_page.html"
+                class="header__nav__list__item__link active"
+                >Обучение</a
               ><span></span>
             </li>
             <li class="header__nav__list__item">
@@ -190,26 +225,48 @@
               ><span></span>
             </li>
             <li class="header__nav__list__item">
-              <button id="themeToggleBtn" onclick="toggleTheme()" aria-label="Сменить тему">
+              <button
+                id="themeToggleBtn"
+                onclick="toggleTheme()"
+                aria-label="Сменить тему"
+              >
                 <div id="iconWrapper">
                   <!-- Солнце -->
-                  <svg id="sunIcon" class="icon show" viewBox="0 0 24 24" fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="5" fill="#F8FAFCCC"/>
+                  <svg
+                    id="sunIcon"
+                    class="icon show"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    width="32"
+                    height="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="5" fill="#F8FAFCCC" />
                     <g stroke="#F8FAFCCC" stroke-width="2">
-                      <line x1="12" y1="1" x2="12" y2="4"/>
-                      <line x1="12" y1="20" x2="12" y2="23"/>
-                      <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
-                      <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
-                      <line x1="1" y1="12" x2="4" y2="12"/>
-                      <line x1="20" y1="12" x2="23" y2="12"/>
-                      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
-                      <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+                      <line x1="12" y1="1" x2="12" y2="4" />
+                      <line x1="12" y1="20" x2="12" y2="23" />
+                      <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                      <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                      <line x1="1" y1="12" x2="4" y2="12" />
+                      <line x1="20" y1="12" x2="23" y2="12" />
+                      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                      <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
                     </g>
                   </svg>
-              
+
                   <!-- Луна -->
-                  <svg id="moonIcon" class="icon hide" viewBox="0 0 24 24" fill="#1E293BCC" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"/>
+                  <svg
+                    id="moonIcon"
+                    class="icon hide"
+                    viewBox="0 0 24 24"
+                    fill="#1E293BCC"
+                    width="32"
+                    height="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"
+                    />
                   </svg>
                 </div>
               </button>
@@ -222,699 +279,196 @@
     <main class="main">
       <section class="hero">
         <div class="container">
-          <div class="hero__content">
-            <h1 class="hero__content__title">Начни водить <br />уверенно</h1>
-            <div class="flying-card">
-              <h4 class="flying-card__title">Собственный автодром</h4>
-            </div>
-            <div class="flying-card">
-              <h4 class="flying-card__title">Оплата в 5 этапов</h4>
-              <p class="flying-card__text">плати частями</p>
-            </div>
-            <div class="flying-card">
-              <h4 class="flying-card__title">Опытные преподаватели</h4>
-              <!-- <p class="flying-card__text">плати частями</p> -->
-            </div>
-            <div class="flying-card">
-              <h4 class="flying-card__title">Гибкий график занятий</h4>
-              <p class="flying-card__text">Выбери свое время</p>
-            </div>
-            <h3 class="hero__content__subtitle">
-              С нами — значит<br />
-              с «правами»!
-            </h3>
-            <button class="hero__content__button button" data-btn="open_modal">
-              Записаться
+          <div class="hero__text">
+            <h1 class="hero__title">Обучение в автошколе</h1>
+            <p class="hero__subtitle">
+              Получите качественное образование и станьте уверенным водителем
+            </p>
+          </div>
+          <div class="hero__action">
+            <button
+              id="light_on"
+              data-btn="open_modal"
+              class="hero__action__button button"
+            >
+              По машинам!
             </button>
           </div>
+          <img src="../assets/car_img.png" alt="Car image" class="hero__img" />
+          <img
+            src="../assets/car_img_lamp.png"
+            alt="Car image"
+            class="hero__img img--on"
+          />
         </div>
       </section>
 
-      <section class="stages">
-
-          <h2 class="stages__title">Этапы обучения</h2>
-
-          <div class="stages__cards">
-            <div class="stages__cards__item">
-              <div class="stages__cards__item__logo">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 11L22 2L13 21L11 13L3 11Z"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 class="stages__cards__item__title">
-                Практическая <br />часть
-              </h3>
-              <div class="stages__cards__item__content">
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_81_279)">
-                        <path
-                          d="M21 10.5C21 17.5 12 23.5 12 23.5C12 23.5 3 17.5 3 10.5C3 8.11305 3.94821 5.82387 5.63604 4.13604C7.32387 2.44821 9.61305 1.5 12 1.5C14.3869 1.5 16.6761 2.44821 18.364 4.13604C20.0518 5.82387 21 8.11305 21 10.5Z"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_81_279">
-                          <rect
-                            width="24"
-                            height="24"
-                            fill="white"
-                            transform="translate(0 0.5)"
-                          />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Место проведения
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      Специализированная площадка и улицы экзаменационных
-                      маршрутов
-                    </p>
-                  </div>
-                </div>
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 6.5V12.5L16 14.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Время занятий
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      С 7:00 до 20:00
-                    </p>
-                  </div>
-                </div>
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17 21.5V19.5C17 18.4391 16.5786 17.4217 15.8284 16.6716C15.0783 15.9214 14.0609 15.5 13 15.5H5C3.93913 15.5 2.92172 15.9214 2.17157 16.6716C1.42143 17.4217 1 18.4391 1 19.5V21.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M9 11.5C11.2091 11.5 13 9.70914 13 7.5C13 5.29086 11.2091 3.5 9 3.5C6.79086 3.5 5 5.29086 5 7.5C5 9.70914 6.79086 11.5 9 11.5Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M23 21.5V19.5C22.9993 18.6137 22.7044 17.7528 22.1614 17.0523C21.6184 16.3519 20.8581 15.8516 20 15.63"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M16 3.63C16.8604 3.85031 17.623 4.35071 18.1676 5.05232C18.7122 5.75392 19.0078 6.61683 19.0078 7.505C19.0078 8.39318 18.7122 9.25608 18.1676 9.95769C17.623 10.6593 16.8604 11.1597 16 11.38"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Инструкторы
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      С 10-летним стажем
-                    </p>
-                  </div>
-                </div>
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_81_301)">
-                        <path
-                          d="M12 1.5V23.5"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M17 5.5H9.5C8.57174 5.5 7.6815 5.86875 7.02513 6.52513C6.36875 7.1815 6 8.07174 6 9C6 9.92826 6.36875 10.8185 7.02513 11.4749C7.6815 12.1313 8.57174 12.5 9.5 12.5H14.5C15.4283 12.5 16.3185 12.8687 16.9749 13.5251C17.6313 14.1815 18 15.0717 18 16C18 16.9283 17.6313 17.8185 16.9749 18.4749C16.3185 19.1313 15.4283 19.5 14.5 19.5H6"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_81_301">
-                          <rect
-                            width="24"
-                            height="24"
-                            fill="white"
-                            transform="translate(0 0.5)"
-                          />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Дополнительно
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      85 литров бензина Оплата по расценкам на время начала
-                      практических занятий
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="stages__cards__item">
-              <div class="stages__cards__item__logo">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2Z"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 class="stages__cards__item__title">
-                Теоритическая<br />
-                часть
-              </h3>
-              <div class="stages__cards__item__content">
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_81_279)">
-                        <path
-                          d="M21 10.5C21 17.5 12 23.5 12 23.5C12 23.5 3 17.5 3 10.5C3 8.11305 3.94821 5.82387 5.63604 4.13604C7.32387 2.44821 9.61305 1.5 12 1.5C14.3869 1.5 16.6761 2.44821 18.364 4.13604C20.0518 5.82387 21 8.11305 21 10.5Z"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_81_279">
-                          <rect
-                            width="24"
-                            height="24"
-                            fill="white"
-                            transform="translate(0 0.5)"
-                          />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Учебные классы
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      ул. Октябрьская 5 (концертный зал "Минск") ул.
-                      Беломорская, 15 (около 33 студ. поликлиники)
-                    </p>
-                  </div>
-                </div>
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 6.5V12.5L16 14.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Продолжительность
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      3.5 месяца
-                    </p>
-                  </div>
-                </div>
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M17 21.5V19.5C17 18.4391 16.5786 17.4217 15.8284 16.6716C15.0783 15.9214 14.0609 15.5 13 15.5H5C3.93913 15.5 2.92172 15.9214 2.17157 16.6716C1.42143 17.4217 1 18.4391 1 19.5V21.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M9 11.5C11.2091 11.5 13 9.70914 13 7.5C13 5.29086 11.2091 3.5 9 3.5C6.79086 3.5 5 5.29086 5 7.5C5 9.70914 6.79086 11.5 9 11.5Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M23 21.5V19.5C22.9993 18.6137 22.7044 17.7528 22.1614 17.0523C21.6184 16.3519 20.8581 15.8516 20 15.63"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M16 3.63C16.8604 3.85031 17.623 4.35071 18.1676 5.05232C18.7122 5.75392 19.0078 6.61683 19.0078 7.505C19.0078 8.39318 18.7122 9.25608 18.1676 9.95769C17.623 10.6593 16.8604 11.1597 16 11.38"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Преподаватели
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      С высшим образованием
-                    </p>
-                  </div>
-                </div>
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19 4.5H5C3.89543 4.5 3 5.39543 3 6.5V20.5C3 21.6046 3.89543 22.5 5 22.5H19C20.1046 22.5 21 21.6046 21 20.5V6.5C21 5.39543 20.1046 4.5 19 4.5Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M16 2.5V6.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M8 2.5V6.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M3 10.5H21"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      График занятий
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      Выбирайте удобное время
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="stages__cards__item">
-              <div class="stages__cards__item__logo">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-              <h3 class="stages__cards__item__title">
-                Экзамен в<br />
-                ГАИ
-              </h3>
-              <div class="stages__cards__item__content">
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_81_279)">
-                        <path
-                          d="M21 10.5C21 17.5 12 23.5 12 23.5C12 23.5 3 17.5 3 10.5C3 8.11305 3.94821 5.82387 5.63604 4.13604C7.32387 2.44821 9.61305 1.5 12 1.5C14.3869 1.5 16.6761 2.44821 18.364 4.13604C20.0518 5.82387 21 8.11305 21 10.5Z"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_81_279">
-                          <rect
-                            width="24"
-                            height="24"
-                            fill="white"
-                            transform="translate(0 0.5)"
-                          />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Допуск к экзамену
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      После сдачи внутреннего экзамена
-                    </p>
-                  </div>
-                </div>
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M19 4.5H5C3.89543 4.5 3 5.39543 3 6.5V20.5C3 21.6046 3.89543 22.5 5 22.5H19C20.1046 22.5 21 21.6046 21 20.5V6.5C21 5.39543 20.1046 4.5 19 4.5Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M16 2.5V6.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M8 2.5V6.5"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M3 10.5H21"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Расписание
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      Удобное расписание Пересдача каждую неделю
-                    </p>
-                  </div>
-                </div>
-                <div class="stages__cards__item__content__block">
-                  <div class="stages__cards__item__content__block__logo">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6 19.5V20.5C6 20.7833 5.90417 21.0208 5.7125 21.2125C5.52083 21.4042 5.28333 21.5 5 21.5H4C3.71667 21.5 3.47917 21.4042 3.2875 21.2125C3.09583 21.0208 3 20.7833 3 20.5V12.5L5.1 6.5C5.2 6.2 5.37917 5.95833 5.6375 5.775C5.89583 5.59167 6.18333 5.5 6.5 5.5H17.5C17.8167 5.5 18.1042 5.59167 18.3625 5.775C18.6208 5.95833 18.8 6.2 18.9 6.5L21 12.5V20.5C21 20.7833 20.9042 21.0208 20.7125 21.2125C20.5208 21.4042 20.2833 21.5 20 21.5H19C18.7167 21.5 18.4792 21.4042 18.2875 21.2125C18.0958 21.0208 18 20.7833 18 20.5V19.5H6ZM5.8 10.5H18.2L17.15 7.5H6.85L5.8 10.5ZM7.5 16.5C7.91667 16.5 8.27083 16.3542 8.5625 16.0625C8.85417 15.7708 9 15.4167 9 15C9 14.5833 8.85417 14.2292 8.5625 13.9375C8.27083 13.6458 7.91667 13.5 7.5 13.5C7.08333 13.5 6.72917 13.6458 6.4375 13.9375C6.14583 14.2292 6 14.5833 6 15C6 15.4167 6.14583 15.7708 6.4375 16.0625C6.72917 16.3542 7.08333 16.5 7.5 16.5ZM16.5 16.5C16.9167 16.5 17.2708 16.3542 17.5625 16.0625C17.8542 15.7708 18 15.4167 18 15C18 14.5833 17.8542 14.2292 17.5625 13.9375C17.2708 13.6458 16.9167 13.5 16.5 13.5C16.0833 13.5 15.7292 13.6458 15.4375 13.9375C15.1458 14.2292 15 14.5833 15 15C15 15.4167 15.1458 15.7708 15.4375 16.0625C15.7292 16.3542 16.0833 16.5 16.5 16.5ZM5 17.5H19V12.5H5V17.5Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                  <div class="stages__cards__item__content__block__content">
-                    <h4
-                      class="stages__cards__item__content__block__content__title"
-                    >
-                      Автомобиль
-                    </h4>
-                    <p
-                      class="stages__cards__item__content__block__content__text"
-                    >
-                      Обучаетесь и сдаете на одном автомобиле
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="registration">
+      <section class="info">
         <div class="container">
-          <h2 class="registration__title">Подходящая автошкола</h2>
-          <h3 class="registration__subtitle">
-            важнейший элемент на пути к тому, чтобы освоить автомобиль и
-            получить большую свободу передвижения
-          </h3>
-          <div class="registration__call">
-            <div class="registration__call__content">
-              <div class="registration__call__content__text-container">
-                <div class="badge-container">
-                  
-                </div>
-                <h4 class="registration__call__content__title">
-                  Начните Обучение Сегодня
-                </h4>
-                <p class="registration__call__content__text">
-                  Сделайте первый шаг к тому, чтобы стать уверенным и
-                  квалифицированным водителем. Наша команда здесь, чтобы помочь!
-                </p>
+          <div class="info__card">
+            <div class="info__card__body">
+              <div class="info__card__logo">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 6V12L16 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </div>
-              <div class="registration__call__content__phone-container">
-                <p class="registration__call__content__phone">
-                  8 (029) 678-72-77 <span>A1</span>
-                </p>
-                <p class="registration__call__content__phone">
-                  8 (029) 754-72-77 <span>МТС</span>
-                </p>
+              <div class="info__card__title">Продолжительность</div>
+              <div class="info__card__text">3.5 месяца</div>
+            </div>
+          </div>
+          <div class="info__card">
+            <div class="info__card__body">
+              <div class="info__card__logo">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M12 1V23"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="info__card__title">Стоимость</div>
+              <div class="info__card__text">
+                1 400 BYN<br />
+                (оплата в 4 этапа)
               </div>
             </div>
-            <div class="registration__call__form">
-              <input
-                type="text"
-                data-name="name"
-                class="registration__call__form__input"
-                placeholder="Имя"
-              />
-              <input
-                type="text"
-                data-name="number"
-                class="registration__call__form__input"
-                placeholder="Номер телефона"
-              />
-              <button
-                type="submit"
-                class="registration__call__form__button button"
-              >
-                Заказать звонок
-              </button>
+          </div>
+          <div class="info__card">
+            <div class="info__card__body">
+              <div class="info__card__logo">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 2V6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 2V6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3 10H21"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="info__card__title">График занятий</div>
+              <div class="info__card__text">Утро, вечер, выходной день</div>
+            </div>
+          </div>
+          <div class="info__card">
+            <div class="info__card__body">
+              <div class="info__card__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <g clip-path="url(#clip0_161_87)">
+                  <path d="M10.852 0.0515571C8.57852 0.285932 6.43164 1.15312 4.59883 2.56874C4.07852 2.96718 2.96758 4.07812 2.56914 4.59843C1.82852 5.54999 1.1207 6.82031 0.722266 7.89843C0.501953 8.49843 0.220703 9.61875 0.112891 10.3359C-0.00898438 11.1234 -0.00898438 12.8719 0.112891 13.6641C0.220703 14.3719 0.501953 15.4969 0.726953 16.1062C1.12539 17.1891 1.82852 18.45 2.56914 19.4016C2.94883 19.8937 4.02227 20.9766 4.50039 21.3562C5.46133 22.1109 6.80664 22.875 7.89414 23.2734C8.50352 23.4984 9.62852 23.7797 10.3363 23.8875C11.0301 23.9906 12.8301 24.0094 13.477 23.9156C15.7363 23.5922 17.6395 22.7953 19.402 21.4312C19.8895 21.0562 20.9723 19.9875 21.3566 19.5C22.1113 18.5437 22.8707 17.1984 23.2738 16.1062C23.4988 15.4969 23.7801 14.3719 23.8879 13.6641C23.9535 13.2422 23.9723 12.825 23.9723 12C23.9723 11.175 23.9535 10.7578 23.8879 10.3359C23.7801 9.62812 23.4988 8.50312 23.2738 7.89375C22.866 6.7875 22.116 5.46562 21.3566 4.49999C20.9863 4.03593 19.9504 2.99999 19.477 2.62499C17.7895 1.28906 15.8535 0.449995 13.6879 0.117182C13.0973 0.0281196 11.452 -0.0140679 10.852 0.0515571ZM12.8957 2.90624C16.9598 3.31874 20.2504 6.35625 20.9957 10.3734L21.0379 10.6031L19.4113 10.5797C17.6535 10.5562 17.4941 10.5375 16.6926 10.2609C15.9285 9.99843 15.2957 9.59531 14.6066 8.92968C13.7301 8.08593 13.0832 7.80937 12.0004 7.80937C10.9082 7.80937 10.252 8.1 9.34727 8.97656C8.70977 9.59062 8.02539 10.0219 7.26602 10.2797C6.50664 10.5375 6.32852 10.5562 4.58945 10.5797L2.96289 10.6031L3.02852 10.2422C3.24414 9.12187 3.73164 7.93593 4.39258 6.95156C6.27695 4.12968 9.5582 2.56874 12.8957 2.90624ZM12.4316 10.6453C12.8395 10.7297 13.1723 10.9172 13.477 11.2219C14.6863 12.4359 14.0301 14.4844 12.3332 14.775C11.6723 14.8875 11.0207 14.6766 10.5238 14.1797C9.68945 13.3547 9.68945 12.0469 10.5238 11.2266C11.0535 10.7016 11.7285 10.5 12.4316 10.6453ZM6.72695 14.9531C9.08008 15.5625 10.416 18.0094 9.67539 20.3578C9.60977 20.5594 9.52539 20.7375 9.48789 20.7516C9.39414 20.7844 8.66289 20.5266 8.08633 20.2547C6.59102 19.5469 5.31133 18.4312 4.35039 16.9922C4.03164 16.5094 3.49727 15.45 3.53008 15.3609C3.5582 15.2812 4.48633 14.9625 4.93164 14.8781C5.3957 14.7891 6.23945 14.8219 6.72695 14.9531ZM18.9848 14.8641C19.3832 14.925 20.4379 15.2766 20.4707 15.3562C20.4848 15.3891 20.3676 15.6797 20.2129 15.9937C19.2988 17.8594 17.766 19.3781 15.9145 20.2547C15.3379 20.5266 14.6066 20.7844 14.5129 20.7516C14.4191 20.7141 14.227 20.0859 14.1566 19.5984C13.8379 17.4234 15.3379 15.3281 17.5316 14.8828C17.9066 14.8078 18.5816 14.7984 18.9848 14.8641Z" fill="currentColor"/>
+                  <path d="M11.6625 12.0984C11.4609 12.2016 11.2969 12.4781 11.2969 12.7031C11.2969 12.9375 11.4609 13.2047 11.6719 13.3125C11.7703 13.3641 11.9203 13.4062 12 13.4062C12.3563 13.4062 12.7031 13.0594 12.7031 12.7031C12.7031 12.4688 12.5391 12.2016 12.3281 12.0938C12.0984 11.9766 11.8875 11.9766 11.6625 12.0984Z" fill="currentColor"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_161_87">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+              </div>
+              <div class="info__card__title">Автомобили</div>
+              <div class="info__card__text">Иномарки с МКПП</div>
+            </div>
+          </div>
+          <div class="info__card">
+            <div class="info__card__body">
+              <div class="info__card__logo">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="info__card__title">Учебные классы</div>
+              <div class="info__card__text">ул. Октябрьская 5, комната 218</div>
             </div>
           </div>
         </div>
       </section>
+
+      <secion class="schedule">
+        <div class="container">
+          
+        </div>
+      </secion>
     </main>
 
     <footer class="footer">

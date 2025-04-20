@@ -1,0 +1,167 @@
+@import "../../scss/vars";
+
+.info {
+  padding: 50px 0;
+  .container {
+    display: flex;
+    gap: 4.625rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__card {
+    background: $carddark;
+    padding: 12px 20px;
+    border-radius: 12px;
+    width: 230px;
+    box-shadow: 1px 2px 12px 2px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+   
+    &:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      background: lighten($carddark, 5%);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        transform: rotate(30deg);
+        animation: shine 1.5s infinite alternate;
+      }
+
+      .info__card__logo {
+        transform: rotate(15deg);
+        background: lighten($badge, 10%);
+        svg {
+          animation: pulse 1s infinite alternate;
+        }
+      }
+
+      .info__card__title {
+        color: lighten(#ffffff, 10%);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+      }
+
+      .info__card__text {
+        transform: scale(1.05);
+      color: lighten($darktext, 15%);
+      }
+    }
+
+    &__body {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &__logo {
+      padding: 13px;
+      background: $badge;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      svg {
+        color: #ffffff;
+        transition: all 0.3s ease;
+      }
+    }
+
+    &__title {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    &__text {
+      color: $darktext;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &.light &__card {
+        background: $cardlight;
+        &:hover {
+            background: lighten($cardlight, 5%);
+      
+            &::before {
+              background: radial-gradient(
+                circle,
+                rgba(99, 102, 241,  0.3) 0%,
+                transparent 70%
+              );
+              transform: rotate(30deg);
+              animation: shine 1.5s infinite alternate;
+            }
+      
+            .info__card__logo {
+              transform: rotate(15deg);
+              background: lighten($badge, 10%);
+              svg {
+                animation: pulse 1s infinite alternate;
+              }
+            }
+      
+            .info__card__title {
+              color: lighten($lighthead, 10%);
+              text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+      
+            .info__card__text {
+              transform: scale(1.05);
+            color: lighten($lighttext, 15%);
+            }
+          }
+
+          &__logo {
+            background: $badge;
+            svg {
+                color: $lighthead;
+
+            }
+            
+          }
+      
+          &__title {
+            color: $lighthead;
+          }
+      
+          &__text {
+            color: $lighttext;
+          }
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

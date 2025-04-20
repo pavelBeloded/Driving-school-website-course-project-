@@ -1,18 +1,17 @@
 @import "../../scss/vars";
 @import "../../scss/header";
-@import "hero";
-@import "stages";
-@import "registration";
 @import "../../scss/footer";
 @import "../../scss/button";
 @import "../../scss/background";
-@import "../../scss/bage";
 @import "../../scss/modal";
 @import "../../scss/_progress-bar";
+@import "hero";
+@import "info";
+
 body {
   font-weight: 500;
-
   background: $bgdark;
+  overflow-x: hidden;
   &.light {
     background: $bglight;
   }

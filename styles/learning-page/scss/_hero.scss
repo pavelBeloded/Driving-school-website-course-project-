@@ -1,0 +1,84 @@
+@import "../../scss/vars";
+
+.hero {
+  padding: 20rem 0 6.25rem;
+  position: relative;
+  overflow: hidden;
+  &__title {
+    font-family: Inter;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    background: $darkGrad;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: titleGrad 2s infinite alternate;
+  }
+
+  &.light &__title {
+    background: $lightGrad;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: titleGrad 2s infinite alternate;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: $darktext;
+    margin-top: 10px;
+  }
+
+  &.light &__subtitle {
+    color: $lighttext;
+  }
+
+  &__action__button {
+    margin-top: 6.25rem;
+  }
+
+  &__img {
+    width: 53.125rem;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -200px;
+    z-index: -1;
+    @media (max-width: 600px) {
+      right: -350px;
+    }
+    @media (max-width:400px) {
+      width: 43.125rem;
+    }
+    // @media (max-width: 600px) {
+    //     right: -50%;
+    //   }
+    &.hide ~ &.img--on {
+      opacity: 1;
+    }
+
+    &.img--on {
+      @media (max-width: 780px) {
+        display: none;
+      }
+
+      opacity: 0;
+      z-index: 100;
+      transform: translateY(8px);
+    }
+  }
+}
+
+@keyframes titleGrad {
+  0% {
+    background-position-x: 0%;
+  }
+
+  100% {
+    background-position-x: 70%;
+  }
+}

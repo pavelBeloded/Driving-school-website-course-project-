@@ -15,7 +15,7 @@ const modal = $.modal({
 })
 
 document.addEventListener('click',(event)=>{
-    event.preventDefault();
+    // event.preventDefault();
     if (event.target.dataset.btn == "open_modal") {
         modal.open();
     }
