@@ -1,0 +1,174 @@
+@import "../../scss/vars";
+
+.pricing {
+  padding: 3.125rem 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: $carddark;
+    width: 50rem;
+    box-shadow: 1px 2px 12px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 4.375rem;
+
+    @media (max-width: 780px) {
+      width: 40rem;
+    }
+    @media (max-width: 500px) {
+      width: 30rem;
+    }
+    @media (max-width: 375px) {
+      width: 25rem;
+    }
+  }
+
+  &.light &__header {
+    background: $cardlight;
+  }
+
+  &__title {
+    color: $mainlightpurple;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    @media (max-width: 375px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    color: $darktext;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  &.light &__subtitle {
+    color: $lighttext;
+  }
+  &__note {
+    color: $darktext;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &.light &__note {
+    color: $lighttext;
+  }
+}
+
+.pricing__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  margin-bottom: 2.8125rem;
+  &::after {
+    content: "";
+    background: $mainlightpurple;
+    position: absolute;
+    width: 2px;
+    height: 53.5625rem;
+    box-shadow: 0px 0px 2px $mainlightpurple;
+    z-index: -1;
+    transform: translateY(-3.125rem);
+    @media (max-width:780px) {
+      height: 55rem;
+    }
+  }
+}
+
+.pricing__item {
+  padding: 1.5rem 1.1875rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  width: 37.5rem;
+  border-radius: 12px;
+  background: $carddark;
+  box-shadow: 1px 2px 12px 0px rgba(0, 0, 0, 0.25);
+@media(max-width: 500px) {
+    width: 100%;
+}
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: $badge;
+    // padding: 5px 9px;
+    width: 34px;
+    height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+    span {
+      color: #fff;
+      text-align: center;
+      font-size: 1.1875rem;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    @media (max-width: 375px) {
+      height: 24px;
+      max-width: 24px;
+      max-height: 24px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__price {
+    color: $red;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__text {
+    max-width: 90%;
+    color: $darktext;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.pricing.light .pricing__item {
+  background: $cardlight;
+  &__number span {
+    color: $lighthead;
+  }
+  &__title {
+    color: $lighthead;
+  }
+
+  &__text {
+    color: $lighttext;
+  }
+}

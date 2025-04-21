@@ -1,0 +1,18 @@
+@import "../../scss/vars";
+@import "../../scss/header";
+@import "../../scss/footer";
+@import "../../scss/button";
+@import "../../scss/background";
+@import "../../scss/modal";
+@import "../../scss/_progress-bar";
+@import "hero";
+@import "pricing";
+
+body {
+    font-weight: 500;
+    background: $bgdark;
+    overflow-x: hidden;
+    &.light {
+      background: $bglight;
+    }
+  }

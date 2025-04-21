@@ -1,0 +1,37 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 0 6.25rem;
+  &__title {
+    font-family: Inter;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    background: $darkGrad;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: titleGrad 2s infinite alternate;
+    text-align: center;
+  }
+  &.light &__title {
+    background: $lightGrad;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: titleGrad 2s infinite alternate;
+  }
+}
+
+@keyframes titleGrad {
+  0% {
+    background-position-x: 0%;
+  }
+
+  100% {
+    background-position-x: 70%;
+  }
+}
