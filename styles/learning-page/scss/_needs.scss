@@ -1,0 +1,145 @@
+@import "../../scss/vars";
+.needs {
+  padding: 5rem 0 3.125rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &__title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &.light &__title {
+    color: $lighthead;
+  }
+}
+
+.needs__cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.card {
+  background: $carddark;
+  width: 32.8125rem;
+  border-radius: 12px;
+  padding: 1.8125rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  transition: 0.2s;
+  border: 1px solid #f8fafc21;
+
+  &:hover {
+    transform: translateY(-10px) scale(0.95);
+    border-color: #f8fafcd5;
+    border-width: 3px;
+    box-shadow: 1px 2px 25px 3px rgba(79, 70, 229, 0.3);
+  }
+
+  &__line {
+    width: 100%;
+  }
+  @media (max-width: 780px) {
+    pointer-events: none;
+  }
+  @media (max-width: 450px) {
+    width: 23.8125rem;
+  }
+  &__logo {
+    background: $badge;
+    border-radius: 50%;
+    padding: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      color: #ffffff;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+
+    &__header {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    &__logo {
+      svg {
+        color: #ffffff;
+      }
+    }
+
+    &__title {
+      color: #fff;
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &__text {
+      color: $darktext;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
+
+.needs.light .card {
+  background: $cardlight;
+  &:hover {
+    border-color: $maindarkpurple;
+  }
+  &__logo {
+    svg {
+      color: $lighthead;
+    }
+  }
+
+  &__title {
+    color: $lighthead;
+  }
+
+  &__item {
+    background: $badge;
+    &__logo {
+      svg {
+        color: $lighthead;
+      }
+    }
+
+    &__title {
+      color: $lighthead;
+    }
+
+    &__text {
+      color: $lighttext;
+    }
+  }
+}

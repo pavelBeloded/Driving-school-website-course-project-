@@ -7,6 +7,9 @@
 @import "../../scss/_progress-bar";
 @import "hero";
 @import "info";
+@import "schedule";
+@import "needs";
+
 
 body {
   font-weight: 500;
@@ -16,3 +19,4 @@ body {
     background: $bglight;
   }
 }
+

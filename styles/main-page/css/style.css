@@ -210,6 +210,9 @@
     background: rgb(30, 27, 75);
   }
 }
+.header.active.light {
+  background: linear-gradient(185deg, #F8FAFC 15%, #E0F0FF 40% 60%, #f8FAFC 100%);
+}
 .header #themeToggleBtn {
   background: transparent;
   border: none;
@@ -970,6 +973,9 @@
   gap: 12px;
   margin-bottom: 24px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal__window__header__close {
   color: #a0aec0;
@@ -995,6 +1001,7 @@
   font-size: 14px;
   font-weight: 400;
   margin: 0;
+  text-align: center;
 }
 .modal__window__body {
   width: 100%;
@@ -1028,6 +1035,11 @@
 .modal.light .modal__window {
   background: rgba(255, 255, 255, 0.8980392157);
 }
+.modal.light .modal__window__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .modal.light .modal__window__header__close {
   color: rgba(30, 41, 59, 0.8);
 }
@@ -1045,6 +1057,7 @@
   font-size: 14px;
   font-weight: 400;
   margin: 0;
+  text-align: center;
 }
 .modal.light .modal__window__body__form__input {
   color: rgba(30, 41, 59, 0.8);
@@ -1060,7 +1073,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 1300;
 }
 .progress-bar__line {
   background: #6366F1;

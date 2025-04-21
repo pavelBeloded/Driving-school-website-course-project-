@@ -210,6 +210,9 @@
     background: rgb(30, 27, 75);
   }
 }
+.header.active.light {
+  background: linear-gradient(185deg, #F8FAFC 15%, #E0F0FF 40% 60%, #f8FAFC 100%);
+}
 .header #themeToggleBtn {
   background: transparent;
   border: none;
@@ -458,6 +461,9 @@
   gap: 12px;
   margin-bottom: 24px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal__window__header__close {
   color: #a0aec0;
@@ -483,6 +489,7 @@
   font-size: 14px;
   font-weight: 400;
   margin: 0;
+  text-align: center;
 }
 .modal__window__body {
   width: 100%;
@@ -516,6 +523,11 @@
 .modal.light .modal__window {
   background: rgba(255, 255, 255, 0.8980392157);
 }
+.modal.light .modal__window__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .modal.light .modal__window__header__close {
   color: rgba(30, 41, 59, 0.8);
 }
@@ -533,6 +545,7 @@
   font-size: 14px;
   font-weight: 400;
   margin: 0;
+  text-align: center;
 }
 .modal.light .modal__window__body__form__input {
   color: rgba(30, 41, 59, 0.8);
@@ -548,7 +561,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 1300;
 }
 .progress-bar__line {
   background: #6366F1;
@@ -633,7 +646,7 @@
   }
 }
 .info {
-  padding: 50px 0;
+  padding: 50px 0 70px;
 }
 .info .container {
   display: flex;
@@ -769,6 +782,354 @@
     transform: scale(1.1);
   }
 }
+.schedule {
+  padding: 6.25rem 0 2.5rem;
+}
+.schedule .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.schedule__title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5625rem;
+}
+.schedule.light .schedule__title {
+  color: #1E293B;
+}
+.schedule__subtitle {
+  color: rgba(248, 250, 252, 0.8);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.schedule.light .schedule__subtitle {
+  color: rgba(30, 41, 59, 0.8);
+}
+.schedule__button {
+  flex-grow: 0;
+}
+
+.groups {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2.75rem;
+  gap: 40px;
+  margin-bottom: 44px;
+}
+
+.time-group {
+  display: flex;
+  padding: 1.5rem 2.25rem;
+  flex-direction: column;
+  width: 32.8125rem;
+  gap: 1.625rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s linear;
+}
+@media (max-width: 784px) {
+  .time-group {
+    pointer-events: none;
+  }
+}
+@media (max-width: 450px) {
+  .time-group {
+    width: 23.8125rem;
+  }
+}
+.time-group:hover::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -50%;
+  left: -50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(173, 173, 173, 0.05) 0%, transparent 70%);
+  transform: rotate(30deg);
+  animation: shine 4s infinite alternate;
+}
+.time-group:hover .time-group__header {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+.time-group:hover .time-group__logo {
+  background: rgba(146, 148, 245, 0.15);
+}
+.time-group:hover .time-group__logo svg {
+  animation: rotation 3s infinite;
+}
+.time-group__header {
+  display: flex;
+  gap: 1.55rem;
+  align-items: center;
+}
+.time-group__logo {
+  background: rgba(99, 102, 241, 0.15);
+  border-radius: 12px;
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time-group__logo svg {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+.time-group__title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  z-index: 10;
+  padding: 1.25rem;
+  align-self: stretch;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+.group:hover {
+  background: rgba(99, 102, 241, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15), 0px 0px 12px 4px rgba(79, 70, 229, 0.3);
+}
+.group:hover .group__time {
+  color: #9294f5;
+}
+.group:hover .group__days {
+  color: #ffffff;
+}
+.group:hover .group__beginning {
+  color: #ffffff;
+}
+.group__time {
+  color: #6366F1;
+  transition: 0.3s;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.group__days {
+  color: rgba(248, 250, 252, 0.8);
+  transition: 0.3s;
+  font-size: c;
+  font-weight: 500;
+  line-height: normal;
+}
+.group__price {
+  color: #ff1c1c;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.group__beginning {
+  color: rgba(248, 250, 252, 0.8);
+  transition: 0.3s;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.schedule.light .time-group__title {
+  color: #1E293B;
+}
+.schedule.light .time-group__logo svg {
+  color: #1E293B;
+}
+.schedule.light .group__days {
+  color: rgba(30, 41, 59, 0.8);
+}
+.schedule.light .group__beginning {
+  color: rgba(30, 41, 59, 0.8);
+}
+.schedule.light .time-group {
+  background: rgba(255, 255, 255, 0.8980392157);
+}
+.schedule.light .time-group:hover {
+  background: rgba(255, 255, 255, 0.8980392157);
+}
+.schedule.light .time-group:hover::before {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+  transform: rotate(30deg);
+  animation: shine 4s infinite alternate;
+}
+.schedule.light .time-group:hover .time-group__title {
+  color: #2f405d;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+.schedule.light .group {
+  background: rgba(99, 102, 241, 0.15);
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.needs {
+  padding: 5rem 0 3.125rem;
+}
+.needs .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.needs__title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.needs.light .needs__title {
+  color: #1E293B;
+}
+
+.needs__cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.8);
+  width: 32.8125rem;
+  border-radius: 12px;
+  padding: 1.8125rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  transition: 0.2s;
+  border: 1px solid rgba(248, 250, 252, 0.1294117647);
+}
+.card:hover {
+  transform: translateY(-10px) scale(0.95);
+  border-color: rgba(248, 250, 252, 0.8352941176);
+  border-width: 3px;
+  box-shadow: 1px 2px 25px 3px rgba(79, 70, 229, 0.3);
+}
+.card__line {
+  width: 100%;
+}
+@media (max-width: 780px) {
+  .card {
+    pointer-events: none;
+  }
+}
+@media (max-width: 450px) {
+  .card {
+    width: 23.8125rem;
+  }
+}
+.card__logo {
+  background: rgba(99, 102, 241, 0.15);
+  border-radius: 50%;
+  padding: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__logo svg {
+  color: #ffffff;
+}
+.card__title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.card__item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+}
+.card__item__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.card__item__logo svg {
+  color: #ffffff;
+}
+.card__item__title {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.card__item__text {
+  color: rgba(248, 250, 252, 0.8);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.needs.light .card {
+  background: rgba(255, 255, 255, 0.8980392157);
+}
+.needs.light .card:hover {
+  border-color: #4F46E5;
+}
+.needs.light .card__logo svg {
+  color: #1E293B;
+}
+.needs.light .card__title {
+  color: #1E293B;
+}
+.needs.light .card__item {
+  background: rgba(99, 102, 241, 0.15);
+}
+.needs.light .card__item__logo svg {
+  color: #1E293B;
+}
+.needs.light .card__item__title {
+  color: #1E293B;
+}
+.needs.light .card__item__text {
+  color: rgba(30, 41, 59, 0.8);
+}
+
 body {
   font-weight: 500;
   background: #1E1B4B;

@@ -124,15 +124,13 @@
         <nav class="header__nav">
           <ul class="header__nav__list">
             <li class="header__nav__list__item">
-              <a
-                href="/html/main_page.html"
-                class="header__nav__list__item__link"
+              <a href="./main_page.html" class="header__nav__list__item__link"
                 >Главная</a
               ><span></span>
             </li>
             <li class="header__nav__list__item active">
               <a
-                href="/html/learning_page.html"
+                href="./learning_page.html"
                 class="header__nav__list__item__link"
                 >Обучение</a
               ><span></span>
@@ -415,17 +413,29 @@
           <div class="info__card">
             <div class="info__card__body">
               <div class="info__card__logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
                   <g clip-path="url(#clip0_161_87)">
-                  <path d="M10.852 0.0515571C8.57852 0.285932 6.43164 1.15312 4.59883 2.56874C4.07852 2.96718 2.96758 4.07812 2.56914 4.59843C1.82852 5.54999 1.1207 6.82031 0.722266 7.89843C0.501953 8.49843 0.220703 9.61875 0.112891 10.3359C-0.00898438 11.1234 -0.00898438 12.8719 0.112891 13.6641C0.220703 14.3719 0.501953 15.4969 0.726953 16.1062C1.12539 17.1891 1.82852 18.45 2.56914 19.4016C2.94883 19.8937 4.02227 20.9766 4.50039 21.3562C5.46133 22.1109 6.80664 22.875 7.89414 23.2734C8.50352 23.4984 9.62852 23.7797 10.3363 23.8875C11.0301 23.9906 12.8301 24.0094 13.477 23.9156C15.7363 23.5922 17.6395 22.7953 19.402 21.4312C19.8895 21.0562 20.9723 19.9875 21.3566 19.5C22.1113 18.5437 22.8707 17.1984 23.2738 16.1062C23.4988 15.4969 23.7801 14.3719 23.8879 13.6641C23.9535 13.2422 23.9723 12.825 23.9723 12C23.9723 11.175 23.9535 10.7578 23.8879 10.3359C23.7801 9.62812 23.4988 8.50312 23.2738 7.89375C22.866 6.7875 22.116 5.46562 21.3566 4.49999C20.9863 4.03593 19.9504 2.99999 19.477 2.62499C17.7895 1.28906 15.8535 0.449995 13.6879 0.117182C13.0973 0.0281196 11.452 -0.0140679 10.852 0.0515571ZM12.8957 2.90624C16.9598 3.31874 20.2504 6.35625 20.9957 10.3734L21.0379 10.6031L19.4113 10.5797C17.6535 10.5562 17.4941 10.5375 16.6926 10.2609C15.9285 9.99843 15.2957 9.59531 14.6066 8.92968C13.7301 8.08593 13.0832 7.80937 12.0004 7.80937C10.9082 7.80937 10.252 8.1 9.34727 8.97656C8.70977 9.59062 8.02539 10.0219 7.26602 10.2797C6.50664 10.5375 6.32852 10.5562 4.58945 10.5797L2.96289 10.6031L3.02852 10.2422C3.24414 9.12187 3.73164 7.93593 4.39258 6.95156C6.27695 4.12968 9.5582 2.56874 12.8957 2.90624ZM12.4316 10.6453C12.8395 10.7297 13.1723 10.9172 13.477 11.2219C14.6863 12.4359 14.0301 14.4844 12.3332 14.775C11.6723 14.8875 11.0207 14.6766 10.5238 14.1797C9.68945 13.3547 9.68945 12.0469 10.5238 11.2266C11.0535 10.7016 11.7285 10.5 12.4316 10.6453ZM6.72695 14.9531C9.08008 15.5625 10.416 18.0094 9.67539 20.3578C9.60977 20.5594 9.52539 20.7375 9.48789 20.7516C9.39414 20.7844 8.66289 20.5266 8.08633 20.2547C6.59102 19.5469 5.31133 18.4312 4.35039 16.9922C4.03164 16.5094 3.49727 15.45 3.53008 15.3609C3.5582 15.2812 4.48633 14.9625 4.93164 14.8781C5.3957 14.7891 6.23945 14.8219 6.72695 14.9531ZM18.9848 14.8641C19.3832 14.925 20.4379 15.2766 20.4707 15.3562C20.4848 15.3891 20.3676 15.6797 20.2129 15.9937C19.2988 17.8594 17.766 19.3781 15.9145 20.2547C15.3379 20.5266 14.6066 20.7844 14.5129 20.7516C14.4191 20.7141 14.227 20.0859 14.1566 19.5984C13.8379 17.4234 15.3379 15.3281 17.5316 14.8828C17.9066 14.8078 18.5816 14.7984 18.9848 14.8641Z" fill="currentColor"/>
-                  <path d="M11.6625 12.0984C11.4609 12.2016 11.2969 12.4781 11.2969 12.7031C11.2969 12.9375 11.4609 13.2047 11.6719 13.3125C11.7703 13.3641 11.9203 13.4062 12 13.4062C12.3563 13.4062 12.7031 13.0594 12.7031 12.7031C12.7031 12.4688 12.5391 12.2016 12.3281 12.0938C12.0984 11.9766 11.8875 11.9766 11.6625 12.0984Z" fill="currentColor"/>
+                    <path
+                      d="M10.852 0.0515571C8.57852 0.285932 6.43164 1.15312 4.59883 2.56874C4.07852 2.96718 2.96758 4.07812 2.56914 4.59843C1.82852 5.54999 1.1207 6.82031 0.722266 7.89843C0.501953 8.49843 0.220703 9.61875 0.112891 10.3359C-0.00898438 11.1234 -0.00898438 12.8719 0.112891 13.6641C0.220703 14.3719 0.501953 15.4969 0.726953 16.1062C1.12539 17.1891 1.82852 18.45 2.56914 19.4016C2.94883 19.8937 4.02227 20.9766 4.50039 21.3562C5.46133 22.1109 6.80664 22.875 7.89414 23.2734C8.50352 23.4984 9.62852 23.7797 10.3363 23.8875C11.0301 23.9906 12.8301 24.0094 13.477 23.9156C15.7363 23.5922 17.6395 22.7953 19.402 21.4312C19.8895 21.0562 20.9723 19.9875 21.3566 19.5C22.1113 18.5437 22.8707 17.1984 23.2738 16.1062C23.4988 15.4969 23.7801 14.3719 23.8879 13.6641C23.9535 13.2422 23.9723 12.825 23.9723 12C23.9723 11.175 23.9535 10.7578 23.8879 10.3359C23.7801 9.62812 23.4988 8.50312 23.2738 7.89375C22.866 6.7875 22.116 5.46562 21.3566 4.49999C20.9863 4.03593 19.9504 2.99999 19.477 2.62499C17.7895 1.28906 15.8535 0.449995 13.6879 0.117182C13.0973 0.0281196 11.452 -0.0140679 10.852 0.0515571ZM12.8957 2.90624C16.9598 3.31874 20.2504 6.35625 20.9957 10.3734L21.0379 10.6031L19.4113 10.5797C17.6535 10.5562 17.4941 10.5375 16.6926 10.2609C15.9285 9.99843 15.2957 9.59531 14.6066 8.92968C13.7301 8.08593 13.0832 7.80937 12.0004 7.80937C10.9082 7.80937 10.252 8.1 9.34727 8.97656C8.70977 9.59062 8.02539 10.0219 7.26602 10.2797C6.50664 10.5375 6.32852 10.5562 4.58945 10.5797L2.96289 10.6031L3.02852 10.2422C3.24414 9.12187 3.73164 7.93593 4.39258 6.95156C6.27695 4.12968 9.5582 2.56874 12.8957 2.90624ZM12.4316 10.6453C12.8395 10.7297 13.1723 10.9172 13.477 11.2219C14.6863 12.4359 14.0301 14.4844 12.3332 14.775C11.6723 14.8875 11.0207 14.6766 10.5238 14.1797C9.68945 13.3547 9.68945 12.0469 10.5238 11.2266C11.0535 10.7016 11.7285 10.5 12.4316 10.6453ZM6.72695 14.9531C9.08008 15.5625 10.416 18.0094 9.67539 20.3578C9.60977 20.5594 9.52539 20.7375 9.48789 20.7516C9.39414 20.7844 8.66289 20.5266 8.08633 20.2547C6.59102 19.5469 5.31133 18.4312 4.35039 16.9922C4.03164 16.5094 3.49727 15.45 3.53008 15.3609C3.5582 15.2812 4.48633 14.9625 4.93164 14.8781C5.3957 14.7891 6.23945 14.8219 6.72695 14.9531ZM18.9848 14.8641C19.3832 14.925 20.4379 15.2766 20.4707 15.3562C20.4848 15.3891 20.3676 15.6797 20.2129 15.9937C19.2988 17.8594 17.766 19.3781 15.9145 20.2547C15.3379 20.5266 14.6066 20.7844 14.5129 20.7516C14.4191 20.7141 14.227 20.0859 14.1566 19.5984C13.8379 17.4234 15.3379 15.3281 17.5316 14.8828C17.9066 14.8078 18.5816 14.7984 18.9848 14.8641Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M11.6625 12.0984C11.4609 12.2016 11.2969 12.4781 11.2969 12.7031C11.2969 12.9375 11.4609 13.2047 11.6719 13.3125C11.7703 13.3641 11.9203 13.4062 12 13.4062C12.3563 13.4062 12.7031 13.0594 12.7031 12.7031C12.7031 12.4688 12.5391 12.2016 12.3281 12.0938C12.0984 11.9766 11.8875 11.9766 11.6625 12.0984Z"
+                      fill="currentColor"
+                    />
                   </g>
                   <defs>
-                  <clipPath id="clip0_161_87">
-                  <rect width="24" height="24" fill="white"/>
-                  </clipPath>
+                    <clipPath id="clip0_161_87">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
                   </defs>
-                  </svg>
+                </svg>
               </div>
               <div class="info__card__title">Автомобили</div>
               <div class="info__card__text">Иномарки с МКПП</div>
@@ -464,11 +474,249 @@
         </div>
       </section>
 
-      <secion class="schedule">
+      <section class="schedule">
         <div class="container">
-          
+          <h2 class="schedule__title">График обучения</h2>
+          <h3 class="schedule__subtitle">
+            Курс обучения составляет 170 академических часов теории и 50 часов
+            практики
+          </h3>
+          <div class="groups">
+            <div class="time-group" id="day-group">
+              <header class="time-group__header">
+                <div class="time-group__logo">
+                  <svg
+                    class="icon show"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    width="32"
+                    height="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="5" fill="currentColor" />
+                    <g stroke="currentColor" stroke-width="2">
+                      <line x1="12" y1="1" x2="12" y2="4" />
+                      <line x1="12" y1="20" x2="12" y2="23" />
+                      <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" />
+                      <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" />
+                      <line x1="1" y1="12" x2="4" y2="12" />
+                      <line x1="20" y1="12" x2="23" y2="12" />
+                      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" />
+                      <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" />
+                    </g>
+                  </svg>
+                </div>
+                <h4 class="time-group__title">Утренние группы</h4>
+              </header>
+              <hr class="time-group__line" />
+              <div class="group">
+                <div class="group__time">11:00 - 13:00</div>
+                <div class="group__days">Понедельник, Среда</div>
+                <div class="group__price">1400 BYN</div>
+                <div class="group__beginning">Начало: 24.03.2025</div>
+              </div>
+              <div class="group">
+                <div class="group__time">11:00 - 13:00</div>
+                <div class="group__days">Вторник, Четверг</div>
+                <div class="group__price">1400 BYN</div>
+                <div class="group__beginning">Начало: 03.04.2025</div>
+              </div>
+            </div>
+            <div class="time-group" id="evening-group">
+              <header class="time-group__header">
+                <div class="time-group__logo">
+                  <svg
+                    class="icon hide"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="32"
+                    height="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 12.79A9 9 0 0111.21 3 7 7 0 0012 21a9 9 0 009-8.21z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="time-group__title">Вечерние группы</h4>
+              </header>
+              <hr class="time-group__line" />
+              <div class="group">
+                <div class="group__time">20:00 - 22:00</div>
+                <div class="group__days">Понедельник, Среда</div>
+                <div class="group__price">1400 BYN</div>
+                <div class="group__beginning">Начало: 24.03.2025</div>
+              </div>
+              <div class="group">
+                <div class="group__time">20:00 - 22:00</div>
+                <div class="group__days">Вторник, Четверг</div>
+                <div class="group__price">1400 BYN</div>
+                <div class="group__beginning">Начало: 03.04.2025</div>
+              </div>
+            </div>
+          </div>
+          <button class="schedule__button button" data-btn="open_modal">
+            Выбрать группу
+          </button>
         </div>
-      </secion>
+      </section>
+
+      <section class="needs">
+        <div class="container">
+          <h2 class="needs__title">Что нужно для записи в автошколу?</h2>
+          <div class="needs__cards">
+            <div class="card">
+              <h4 class="card__title">Для совершеннолетних</h4>
+              <hr class="card__line" />
+              <div class="card__item">
+                <header class="card__item__header">
+                  <div class="card__item__logo">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M14 2.5H6C5.46957 2.5 4.96086 2.71071 4.58579 3.08579C4.21071 3.46086 4 3.96957 4 4.5V20.5C4 21.0304 4.21071 21.5391 4.58579 21.9142C4.96086 22.2893 5.46957 22.5 6 22.5H18C18.5304 22.5 19.0391 22.2893 19.4142 21.9142C19.7893 21.5391 20 21.0304 20 20.5V8.5L14 2.5Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14 2.5V8.5H20"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 13.5H8"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 17.5H8"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10 9.5H9H8"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="card__item__title">Копия паспорта</h4>
+                </header>
+                <p class="card__item__text">
+                  Страницы 31-33 + страница с регистрацией/пропиской
+                </p>
+              </div>
+              <div class="card__item">
+                <header class="card__item__header">
+                  <div class="card__item__logo">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M19 3.5H5C3.89543 3.5 3 4.39543 3 5.5V19.5C3 20.6046 3.89543 21.5 5 21.5H19C20.1046 21.5 21 20.6046 21 19.5V5.5C21 4.39543 20.1046 3.5 19 3.5Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.5 10.5C9.32843 10.5 10 9.82843 10 9C10 8.17157 9.32843 7.5 8.5 7.5C7.67157 7.5 7 8.17157 7 9C7 9.82843 7.67157 10.5 8.5 10.5Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M21 15.5L16 10.5L5 21.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="card__item__title">Фотографии</h4>
+                </header>
+                <p class="card__item__text">2 фото размером 3х4</p>
+              </div>
+              <div class="card__item">
+                <header class="card__item__header">
+                  <div class="card__item__logo">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M22 12.5H18L15 21.5L9 3.5L6 12.5H2"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="card__item__title">Медицинская справка</h4>
+                </header>
+                <p class="card__item__text">Копия медицинской справки</p>
+              </div>
+              <h4 class="card__title">Для несовершеннолетних</h4>
+              <hr class="card__line" />
+              <div class="card__item">
+                <header class="card__item__header">
+                  <div class="card__item__logo">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-user-plus"
+                    >
+                      <path
+                        d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="8.5" cy="7" r="4"></circle>
+                      <line x1="20" y1="8" x2="20" y2="14"></line>
+                      <line x1="23" y1="11" x2="17" y2="11"></line>
+                    </svg>
+                  </div>
+                  <h4 class="card__item__title">Законный представитель</h4>
+                </header>
+                <p class="card__item__text">
+                  Присутствие одного из родителей (отца/матери)
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="needs__button button" data-btn="open_modal">Забронировать место</button>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

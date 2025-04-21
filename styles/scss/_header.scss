@@ -257,6 +257,10 @@
     @media (max-width: 784px) {
       background: rgba(30, 27, 75, 1);
     }
+
+    &.light {
+      background: $bglight;
+    }
   }
 
   #themeToggleBtn {
@@ -272,7 +276,7 @@
 
     & svg,
     & circle,
-    & line  {
+    & line {
       transition: 0.3s;
     }
 
@@ -282,7 +286,7 @@
       fill: lighten($mainlightpurple, 5%);
       stroke: lighten($mainlightpurple, 5%);
       transform: scale(1.05);
-      filter:drop-shadow(0px 0px 3px $badge);
+      filter: drop-shadow(0px 0px 3px $badge);
     }
 
     &:focus-visible svg,
@@ -291,7 +295,7 @@
       fill: lighten($mainlightpurple, 5%);
       stroke: lighten($mainlightpurple, 5%);
       transform: scale(1.05);
-      filter:drop-shadow(0px 0px 3px $badge);
+      filter: drop-shadow(0px 0px 3px $badge);
       outline: none;
       border: 0;
     }

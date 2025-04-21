@@ -1,0 +1,254 @@
+@import "../../scss/vars";
+.schedule {
+  padding: 6.25rem 0 2.5rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5625rem;
+  }
+
+  &.light &__title {
+    color: $lighthead;
+  }
+  &__subtitle {
+    color: $darktext;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &.light &__subtitle {
+    color: $lighttext;
+  }
+
+  &__button {
+    flex-grow: 0;
+  }
+}
+
+.groups {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2.75rem;
+  gap: 40px;
+  margin-bottom: 44px;
+}
+
+.time-group {
+  display: flex;
+  padding: 1.5rem 2.25rem;
+  flex-direction: column;
+  width: 32.8125rem;
+  @media (max-width: 784px) {
+    pointer-events: none;
+  }
+  @media (max-width: 450px) {
+    width: 23.8125rem;
+  }
+  gap: 1.625rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: $carddark;
+  box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s linear;
+  &:hover {
+    // background: lighten($color: $carddark, $amount: 5%);
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: -50%;
+      left: -50%;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(
+        circle,
+        rgba(173, 173, 173, 0.05) 0%,
+        transparent 70%
+      );
+      transform: rotate(30deg);
+      animation: shine 4s infinite alternate;
+    }
+
+    .time-group__header {
+      color: lighten(#ffffff, 10%);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+    .time-group__logo {
+      background: lighten($badge, 10%);
+      svg {
+        animation: rotation 3s infinite;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 1.55rem;
+    align-items: center;
+  }
+  &__logo {
+    background: $badge;
+    border-radius: 12px;
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 24px;
+      height: 24px;
+      color: #ffffff;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  z-index: 10;
+  padding: 1.25rem;
+  align-self: stretch;
+
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+  &:hover {
+    background: rgba(99, 102, 241, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15),
+      0px 0px 12px 4px rgba(79, 70, 229, 0.3);
+    .group__time {
+      color: lighten($color: $mainlightpurple, $amount: 10%);
+    }
+
+    .group__days {
+      color: #ffffff;
+    }
+
+    .group__beginning {
+      color: #ffffff;
+    }
+  }
+
+  &__time {
+    color: $mainlightpurple;
+    transition: 0.3s;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  &__days {
+    color: $darktext;
+    transition: 0.3s;
+
+    font-size: c;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__price {
+    color: $red;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__beginning {
+    color: $darktext;
+    transition: 0.3s;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.schedule.light {
+  .time-group__title {
+    color: $lighthead;
+  }
+  .time-group__logo svg {
+    color: $lighthead;
+  }
+
+  .group__days {
+    color: $lighttext;
+  }
+
+  .group__beginning {
+    color: $lighttext;
+  }
+
+  .time-group {
+    background: $cardlight;
+
+    &:hover {
+      background: lighten($color: $cardlight, $amount: 5%);
+      &::before {
+        background: radial-gradient(
+          circle,
+          rgba(99, 102, 241, 0.3) 0%,
+          transparent 70%
+        );
+        transform: rotate(30deg);
+        animation: shine 4s infinite alternate;
+      }
+
+      .time-group__title {
+        color: lighten($lighthead, 10%);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  .group {
+    background: $badge;
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
