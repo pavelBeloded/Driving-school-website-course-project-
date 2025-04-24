@@ -5,4 +5,3 @@ burger.addEventListener("click", () => {
   header.classList.toggle("active");
   nav.classList.toggle("active");
 });
-
