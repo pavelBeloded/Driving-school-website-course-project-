@@ -8,9 +8,9 @@ function isDark() {
   return !document.body.classList.contains("light");
 }
 
-if(prefersDark) {
+if(prefersDark && !localStorage.getItem("theme")) {
   localStorage.setItem("theme", "dark");
-} else {
+} else if (!prefersDark && !localStorage.getItem("theme")) {
   localStorage.setItem("theme", "light");
 }
 
@@ -52,5 +52,5 @@ function toggleTheme() {
 
   isDark()
     ? localStorage.setItem("theme", "dark")
-    : localStorage.setItem("theme", "li ght");
+    : localStorage.setItem("theme", "light");
 }

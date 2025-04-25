@@ -1,0 +1,208 @@
+@import "../../scss/vars";
+
+.reviews {
+  display: flex;
+  padding: 3.0625rem 5rem 5.625rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  min-height: 60vh;
+  @media (max-width: 600px) {
+    padding: 3.0625rem 1rem 5.625rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+.slider {
+  // position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  gap: 20px;
+  padding: 0 10px;
+  &__button {
+    // position: absolute;
+    transition: all 0.3s;
+    border-radius: 50%;
+    outline: none;
+    border: 0;
+    background: $badge;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 500px) {
+      display: none;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: #ffffff;
+    }
+
+    &:hover {
+      background: $mainlightpurple;
+      transform: scale(1.1);
+    }
+
+    &[disabled] {
+      opacity: 0.5;
+      pointer-events: none;
+      background: rgba(99, 102, 241, 0.5);
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    // overflow-x: hidden;
+    position: relative;
+    height: 300px;
+    @media (max-width: 500px) {
+      height: 400px;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    // height: 17.125rem;
+    width: 100%;
+    flex: 0 0 32.8125rem;
+    padding: 1.5625rem;
+    border-radius: 12px;
+    background: $carddark;
+    box-shadow: 1px 2px 12px 0px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease;
+    will-change: transform;
+
+    @media (min-width: 768px) {
+      width: 34.375rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    &__header {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+
+      @media (max-width: 400px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+    }
+
+    &__avatar {
+      border-radius: 50%;
+      width: 3.75rem;
+      height: 3.75rem;
+      background: $badge;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+      border: 2px solid $mainlightpurple;
+    }
+
+    &__stars {
+      display: flex;
+      gap: 0.25rem;
+      color: #ffffff;
+    }
+
+    &__author {
+      color: $darktext;
+      font-family: Inter;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 5px;
+    }
+
+    &__star {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__text {
+      color: $darktext;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    &__date {
+      color: $mainlightpurple;
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0;
+      justify-self: flex-end;
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slider__item {
+  animation: fadeIn 0.5s ease;
+}
+
+.reviews.light .slider {
+  &__button {
+    background: $cardlight;
+    svg {
+      color: $lighthead;
+    }
+  }
+
+  &__item {
+    background: $cardlight;
+
+    &__author {
+      color: $lighttext;
+    }
+
+    &__star {
+    color: $lighthead;
+    }
+
+    &__text {
+      color: $lighttext;
+    }
+
+    &__date {
+      color: $maindarkpurple;
+    }
+  }
+}
