@@ -626,7 +626,6 @@
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  min-height: 60vh;
 }
 @media (max-width: 600px) {
   .reviews {
@@ -814,6 +813,7 @@ body {
   font-weight: 500;
   background: #1E1B4B;
   overflow-x: hidden;
+  height: 100vh;
 }
 body.light {
   background: linear-gradient(185deg, #F8FAFC 15%, #E0F0FF 40% 60%, #f8FAFC 100%);
