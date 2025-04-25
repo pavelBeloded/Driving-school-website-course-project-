@@ -1,0 +1,53 @@
+.hero {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 0 6.25rem;
+  &__title {
+    font-family: Inter;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    background: $darkGrad;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: titleGrad 2s infinite alternate;
+    text-align: center;
+  }
+  &.light &__title {
+    background: $lightGrad;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: titleGrad 2s infinite alternate;
+  }
+  &__subtitle {
+    color: $darktext;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  &.light &__subtitle {
+    color: $lighthead;
+  }
+}
+
+@keyframes titleGrad {
+  0% {
+    background-position-x: 0%;
+  }
+
+  100% {
+    background-position-x: 70%;
+  }
+}
