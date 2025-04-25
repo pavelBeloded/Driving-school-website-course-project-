@@ -2,9 +2,18 @@ const footer = document.querySelector(".footer");
 const headerEl = document.querySelector(".header");
 const sections = document.querySelectorAll("section");
 
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 function isDark() {
   return !document.body.classList.contains("light");
 }
+
+if(prefersDark) {
+  localStorage.setItem("theme", "dark");
+} else {
+  localStorage.setItem("theme", "light");
+}
+
 
 const theme = localStorage.getItem("theme");
 if (!theme) {
