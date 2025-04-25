@@ -647,6 +647,7 @@
   overflow: hidden;
   gap: 20px;
   padding: 0 10px;
+  margin-bottom: 6.25rem;
 }
 .slider__button {
   transition: all 0.3s;
