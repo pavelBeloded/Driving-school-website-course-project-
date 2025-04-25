@@ -575,6 +575,7 @@
   padding: 10rem 0 6.25rem;
 }
 .hero .container {
+  padding: 7.5rem 0 3.75rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -647,7 +648,7 @@
   overflow: hidden;
   gap: 20px;
   padding: 0 10px;
-  margin-bottom: 6.25rem;
+  margin-bottom: 2.25rem;
 }
 .slider__button {
   transition: all 0.3s;
@@ -814,7 +815,6 @@ body {
   font-weight: 500;
   background: #1E1B4B;
   overflow-x: hidden;
-  height: 110vh;
 }
 body.light {
   background: linear-gradient(185deg, #F8FAFC 15%, #E0F0FF 40% 60%, #f8FAFC 100%);
