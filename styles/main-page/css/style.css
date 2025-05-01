@@ -777,8 +777,8 @@
 
 .button {
   display: flex;
-  font-size: 0.81rem;
-  height: 2.5rem;
+  font-size: 12.96px;
+  height: 40px;
   padding: 12px 18px;
   justify-content: center;
   align-items: center;
