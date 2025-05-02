@@ -4,12 +4,14 @@ const modal = $.modal({
     inputs: [{
         data: "name",
         type: "text",
-        placeholder: "Имя"
+        placeholder: "Имя",
+        name: "name"
     },
     {
         data: "phone",
         type: "tel",
-        placeholder: "Номер телефона"
+        placeholder: "Номер телефона",
+        name: "phone"
     }],
     buttonText: "Заказать звонок"
 })

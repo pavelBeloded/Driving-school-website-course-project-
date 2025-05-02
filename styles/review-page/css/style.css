@@ -811,6 +811,24 @@
   color: #4F46E5;
 }
 
+.popup {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  z-index: 10000;
+  background: #6366F1;
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.popup__text {
+  color: #ffffff;
+}
+.popup.hide {
+  transform: translateX(-50%) translateY(-200px);
+}
+
 body {
   font-weight: 500;
   background: #1E1B4B;

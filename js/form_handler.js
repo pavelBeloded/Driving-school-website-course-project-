@@ -1,9 +1,14 @@
-document
-  .getElementById("callback-form")
-  .addEventListener("submit", form_handler);
-document
-  .getElementById("callback-form-modal")
-  .addEventListener("submit", form_handler);
+document.addEventListener("DOMContentLoaded", () => {
+  const form1 = document.getElementById("callback-form");
+  if (form1) {
+    form1.addEventListener("submit", form_handler);
+  }
+  const form2 = document.getElementById("callback-form-modal");
+  if (form2) {
+    form2.addEventListener("submit", form_handler);
+  }
+});
+
 async function form_handler(e) {
   e.preventDefault();
 

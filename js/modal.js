@@ -23,19 +23,26 @@ function _createModal(options) {
                 value="dc72dff0-15e2-4a31-ae3a-332002f6059f"
               />
               
-              ${options.inputs.map(input => `
+              ${options.inputs
+                .map(
+                  (input) => `
             <input
               data-type="${input.data}"
               type="${input.type}"
               class="modal__window__body__form__input"
               placeholder="${input.placeholder}"
+              name="${input.name}"
+              required
             />
-          `).join('')}
+          `
+                )
+                .join("")}
               <input
                 type="checkbox"
                 name="botcheck"
                 class="hidden"
                 style="display: none"
+                
               />
               ${
                 options.buttonText
