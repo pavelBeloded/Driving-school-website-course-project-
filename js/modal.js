@@ -16,7 +16,13 @@ function _createModal(options) {
             </header>
 
             <div class="modal__window__body">
-            <form class="modal__window__body__form" action="" method="post">
+            <form id="callback-form-modal" class="modal__window__body__form" action="" method="post">
+            <input
+                type="hidden"
+                name="access_key"
+                value="dc72dff0-15e2-4a31-ae3a-332002f6059f"
+              />
+              
               ${options.inputs.map(input => `
             <input
               data-type="${input.data}"
@@ -25,10 +31,15 @@ function _createModal(options) {
               placeholder="${input.placeholder}"
             />
           `).join('')}
-              
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
+              />
               ${
                 options.buttonText
-                  ? `<button class="modal__window__body__form__button button">
+                  ? `<button type="submit" class="modal__window__body__form__button button">
                 ${options.buttonText}
               </button>`
                   : ""

@@ -14,8 +14,11 @@
     <script defer src="../js/hide_header.js"></script>
     <script defer src="../js/progressbar.js"></script>
     <script defer src="../js/toggleTheme.js"></script>
+    <script defer src="../js/popup.js"></script>
+    <script defer src="../js/form_handler.js"></script>
   </head>
   <body class="">
+    
     <div class="progress-bar">
       <div class="progress-bar__line"></div>
     </div>
@@ -87,7 +90,8 @@
               <span></span>
             </li>
             <li class="header__nav__list__item">
-              <a href="./review_page.html" class="header__nav__list__item__link">Отзывы</a
+              <a href="./review_page.html" class="header__nav__list__item__link"
+                >Отзывы</a
               ><span></span>
             </li>
             <button
@@ -147,9 +151,7 @@
         <nav class="header__nav mobile">
           <ul class="header__nav__list">
             <li class="header__nav__list__item active">
-              <a
-                href="./main_page.html"
-                class="header__nav__list__item__link"
+              <a href="./main_page.html" class="header__nav__list__item__link"
                 >Главная</a
               ><span></span>
             </li>
@@ -169,7 +171,8 @@
               <span></span>
             </li>
             <li class="header__nav__list__item">
-              <a href="./review_page.html" class="header__nav__list__item__link">Отзывы</a
+              <a href="./review_page.html" class="header__nav__list__item__link"
+                >Отзывы</a
               ><span></span>
             </li>
             <li class="header__nav__list__item">
@@ -869,18 +872,33 @@
                 </p>
               </div>
             </div>
-            <div class="registration__call__form">
+            <form id="callback-form" class="registration__call__form">
               <input
-                type="text"
-                data-name="name"
-                class="registration__call__form__input"
-                placeholder="Имя"
+                type="hidden"
+                name="access_key"
+                value="dc72dff0-15e2-4a31-ae3a-332002f6059f"
               />
               <input
                 type="text"
+                name="name"
+                data-name="name"
+                class="registration__call__form__input"
+                placeholder="Имя"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
                 data-name="number"
                 class="registration__call__form__input"
                 placeholder="Номер телефона"
+                required
+              />
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
               />
               <button
                 type="submit"
@@ -888,7 +906,7 @@
               >
                 Заказать звонок
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </section>

@@ -1,0 +1,19 @@
+@import "vars";
+.popup {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  z-index: 1000;
+  background: $mainlightpurple;
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+  &__text {
+    color: #ffffff;
+  }
+
+  &.hide {
+    transform: translateX(-50%) translateY(-200px);
+  }
+}
