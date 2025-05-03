@@ -6,7 +6,6 @@
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  // min-height: 60vh;
   @media (max-width: 600px) {
     padding: 3.0625rem 1rem 5.625rem;
   }
@@ -21,7 +20,6 @@
 }
 
 .slider {
-  // position: relative;
   display: flex;
   width: 100%;
   align-items: center;
@@ -30,7 +28,6 @@
   padding: 0 10px;
   margin-bottom: 2.25rem;
   &__button {
-    // position: absolute;
     transition: all 0.3s;
     border-radius: 50%;
     outline: none;
@@ -72,7 +69,6 @@
     align-items: stretch;
     justify-content: center;
     width: 100%;
-    // overflow-x: hidden;
     position: relative;
     height: 300px;
     @media (max-width: 500px) {
@@ -84,7 +80,6 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    // height: 17.125rem;
     width: 100%;
     flex: 0 0 32.8125rem;
     padding: 1.5625rem;
